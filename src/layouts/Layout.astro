@@ -1,5 +1,7 @@
 ---
-import "../styles/global.css";
+import { Image } from 'astro:assets';
+import '../styles/global.css';
+import Logo from '../assets/logodvh.png';
 
 interface Props {
   title: string;
@@ -20,6 +22,41 @@ const { title, description } = Astro.props
     <title>{title}</title>
   </head>
   <body>
+<header class="relative z-10">
+  <nav class="fixed top-0 left-0 w-full flex items-center justify-between px-6 py-4 bg-black/10 backdrop-blur-md">
+    <!-- Logo sin opacidad -->
+    <div>
+          <Image src={Logo} alt="Logo" class="md:h-30 h-10 w-auto" />
+    </div>
+
+    <!-- Botón menú hamburguesa -->
+    <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+      </svg>
+    </button>
+
+    <!-- Menú -->
+    <ul id="menu" class="hidden md:flex space-x-6 text-white absolute md:static bg-black/40 md:bg-transparent w-full md:w-auto top-16 left-0 md:top-auto md:left-auto transition-transform duration-300 ease-in">
+      <li class="p-4 hover:bg-gray-700 md:hover:bg-transparent md:p-0"><a href="#">Inicio</a></li>
+      <li class="p-4 hover:bg-gray-700 md:hover:bg-transparent md:p-0"><a href="#">Servicios</a></li>
+      <li class="p-4 hover:bg-gray-700 md:hover:bg-transparent md:p-0"><a href="#">Sobre Nosotros</a></li>
+      <li class="p-4 hover:bg-gray-700 md:hover:bg-transparent md:p-0"><a href="#">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+    const menuIcon = document.getElementById('menu-icon');
+
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+      const isOpen = !menu.classList.contains('hidden');
+      menuIcon.setAttribute('d', isOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16m-7 6h7');
+    });
+  </script>
+</header>
     <slot />
   </body>
 </html>
