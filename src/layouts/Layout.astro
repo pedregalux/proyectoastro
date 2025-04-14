@@ -23,10 +23,10 @@ const { title, description } = Astro.props
   </head>
   <body>
 <header class="relative z-10">
-  <nav class="fixed top-0 left-0 w-full flex items-center justify-between px-6 py-4 bg-black/10 backdrop-blur-md">
+  <nav class="fixed top-0 left-0 w-full flex items-center justify-between px-6 py-4 bg-black/20 backdrop-blur-md">
     <!-- Logo sin opacidad -->
     <div>
-          <Image src={Logo} alt="Logo" class="md:h-30 h-10 w-auto" />
+          <Image src={Logo} alt="Logo" class="md:h-auto h-auto w-100" />
     </div>
 
     <!-- Botón menú hamburguesa -->
@@ -37,11 +37,11 @@ const { title, description } = Astro.props
     </button>
 
     <!-- Menú -->
-    <ul id="menu" class="hidden md:flex space-x-6 text-white absolute md:static bg-black/40 md:bg-transparent w-full md:w-auto top-16 left-0 md:top-auto md:left-auto transition-transform duration-300 ease-in">
-          <li class="md:text-2xl md:font-bold p-4 md:text-pretty-white md:decoration-transparent md:hover:underline md:hover:decoration-dotted md:transition md:duration-300 md:p-0 md:hover:decoration-dotted-[#D6FF58]"><a href="#">Inicio</a></li>
-      <li class="md:text-2xl md:font-bold p-4 hover:bg-gray-700 md:hover:bg-transparent md:hover:text-[#D6FF58] md:p-0"><a href="#">Servicios</a></li>
-      <li class="md:text-2xl md:font-bold p-4 hover:bg-gray-700 md:hover:bg-transparent md:hover:text-[#D6FF58] md:p-0"><a href="#">Sobre Nosotros</a></li>
-      <li class="md:text-2xl md:font-bold p-4 hover:bg-gray-700 md:hover:bg-transparent md:hover:text-[#D6FF58] md:p-0"><a href="#">Contacto</a></li>
+    <ul id="menu" class="hidden md:flex space-x-6 text-lime-950 absolute md:static bg-black/40 md:bg-transparent w-full md:w-auto top-16 left-0 md:top-auto md:left-auto transition-transform duration-300 ease-in">
+          <li class="md:text-[16px] md:font-bold p-4 hover:bg-gray-700 md:hover:bg-transparent md:hover:text-[#000000] md:p-0"><a href="#">Inicio</a></li>
+      <li class="md:text-[16px] md:font-bold p-4 hover:bg-gray-700 md:hover:bg-transparent md:hover:text-[#000000] md:p-0"><a href="#">Servicios</a></li>
+      <li class="md:text-[16px] md:font-bold p-4 hover:bg-gray-700 md:hover:bg-transparent md:hover:text-[#000000] md:p-0"><a href="#">Sobre Nosotros</a></li>
+      <li class="md:text-[16px] md:font-bold p-4 hover:bg-gray-700 md:hover:bg-transparent md:hover:text-[#000000] md:p-0"><a href="#">Contacto</a></li>
     </ul>
   </nav>
 
