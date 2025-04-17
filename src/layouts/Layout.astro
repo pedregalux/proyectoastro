@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import '../styles/global.css';
-import { ViewTransitions } from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions';
 import Logo from '../assets/logodvh.png';
 
 interface Props {
@@ -21,7 +21,7 @@ const { title, description } = Astro.props
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="description" content={description} />
     <title>{title}</title>
-    <ViewTransitions />
+    <ClientRouter />
   </head>
   <body class="bg-zinc-950">
 <header class="relative z-10">
