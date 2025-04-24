@@ -8,7 +8,7 @@
 }
 
 @theme {
-  --animate-rotate-border: border-rotate 12s linear infinite;
+  --animate-rotate-border: border-rotate 8s linear infinite;
   @keyframes border-rotate {
   to {
     --border-angle: 360deg;
